@@ -4,19 +4,30 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بوابة الإدارة | مجمع النور التجاري</title>
 <style>
-:root{font-family:system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;color:#17302d;background:#f3f7f5}*{box-sizing:border-box}body{margin:0}.top{background:linear-gradient(120deg,#0f5549,#21866d);color:#fff;padding:23px max(16px,calc((100vw - 1020px)/2));box-shadow:0 3px 17px #1239}.top h1{margin:0 0 5px;font-size:1.6rem}.top p{margin:0;font-size:.9rem;opacity:.9}main{max-width:1020px;margin:22px auto;padding:0 14px 42px}.card{background:white;border:1px solid #dbe7e1;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 4px 16px #24471a0b}h2{font-size:1.17rem;margin:0 0 14px}.muted{font-size:.9rem;color:#65756f;line-height:1.85}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{min-width:0}input,textarea,select{font-family:inherit;max-width:100%;border:1px solid #cfdbd5;background:#fff;border-radius:9px;padding:11px;font-size:1rem;outline-color:#0c9773}input[type=password]{width:100%;direction:ltr}input[type=text],input[type=number]{width:100%}.btn{cursor:pointer;font-weight:700;background:#126b58;color:white;border:0;border-radius:9px;padding:11px 18px;font-family:inherit;font-size:.94rem}.btn.alt{background:#e5efea;color:#155144}.btn.danger{background:#fff0f0;color:#a72b36}.btn:disabled{opacity:.5;cursor:not-allowed}.hidden{display:none!important}.status{margin:12px 0;line-height:1.8;padding:10px 13px;border-radius:10px;background:#e4f4ec;color:#15543e;white-space:pre-wrap}.status.err{background:#feeceb;color:#9a2d2f}.notice{padding:12px 14px;border:1px solid #e8d59b;background:#fff8e5;border-radius:10px;margin:12px 0;color:#645324;font-size:.91rem;line-height:1.8}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tab{background:#e9f2ee;border:1px solid #d0e4da;color:#285345;padding:8px 14px;border-radius:20px;font-weight:700;cursor:pointer}.tab.active{background:#116a56;color:#fff}.product{padding:16px;margin:12px 0;border:1px solid #d9e6df;border-radius:12px;background:#fbfdfc}.productheader{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.field{display:block;font-size:.88rem;color:#43564e;font-weight:600}.field input,.field textarea{margin-top:6px;width:100%}.field textarea{resize:vertical;min-height:68px;direction:ltr}#rawCode{direction:ltr;text-align:left;width:100%;min-height:370px;font:13px/1.6 ui-monospace,monospace;white-space:pre;tab-size:2}#loginArea{max-width:700px}.hint{background:#eef5f1;padding:8px 12px;border-radius:9px}small{font-size:.8rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.break{word-break:break-all}@media(max-width:600px){.card{padding:14px}.top h1{font-size:1.35rem}}
+:root{font-family:system-ui,-apple-system,'Segoe UI',Tahoma,sans-serif;color:#17302d;background:#f3f7f5}*{box-sizing:border-box}body{margin:0}.top{background:linear-gradient(120deg,#0f5549,#21866d);color:#fff;padding:23px max(16px,calc((100vw - 1020px)/2));box-shadow:0 3px 17px #1239}.top h1{margin:0 0 5px;font-size:1.6rem}.top p{margin:0;font-size:.9rem;opacity:.9}main{max-width:1020px;margin:22px auto;padding:0 14px 42px}.card{background:white;border:1px solid #dbe7e1;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 4px 16px #24471a0b}h2{font-size:1.17rem;margin:0 0 14px}.muted{font-size:.9rem;color:#65756f;line-height:1.85}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{min-width:0}input,textarea,select{font-family:inherit;max-width:100%;border:1px solid #cfdbd5;background:#fff;border-radius:9px;padding:11px;font-size:1rem;outline-color:#0c9773}input[type=password]{width:100%;direction:ltr}input[type=text],input[type=number]{width:100%}.btn{cursor:pointer;font-weight:700;background:#126b58;color:white;border:0;border-radius:9px;padding:11px 18px;font-family:inherit;font-size:.94rem}.btn.alt{background:#e5efea;color:#155144}.btn.danger{background:#fff0f0;color:#a72b36}.btn:disabled{opacity:.5;cursor:not-allowed}.hidden{display:none!important}.status{margin:12px 0;line-height:1.8;padding:10px 13px;border-radius:10px;background:#e4f4ec;color:#15543e;white-space:pre-wrap}.status.err{background:#feeceb;color:#9a2d2f}.notice{padding:12px 14px;border:1px solid #e8d59b;background:#fff8e5;border-radius:10px;margin:12px 0;color:#645324;font-size:.91rem;line-height:1.8}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tab{background:#e9f2ee;border:1px solid #d0e4da;color:#285345;padding:8px 14px;border-radius:20px;font-weight:700;cursor:pointer}.tab.active{background:#116a56;color:#fff}.product{padding:16px;margin:12px 0;border:1px solid #d9e6df;border-radius:12px;background:#fbfdfc}.productheader{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.field{display:block;font-size:.88rem;color:#43564e;font-weight:600}.field input,.field textarea{margin-top:6px;width:100%}.field textarea{resize:vertical;min-height:68px;direction:ltr}#rawCode{direction:ltr;text-align:left;width:100%;min-height:370px;font:13px/1.6 ui-monospace,monospace;white-space:pre;tab-size:2}#loginArea{max-width:700px}.hint{background:#eef5f1;padding:8px 12px;border-radius:9px}small{font-size:.8rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.break{word-break:break-all}.top a{color:white;text-decoration:none;border:1px solid #ffffff88;border-radius:9px;padding:7px 12px;display:inline-block;margin-top:12px}.settingsgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.stepguide{background:#eef8f5;border:1px solid #cce6d9;border-radius:12px;padding:12px 15px;margin-top:12px;line-height:1.9}.stepguide a{color:#08674e}.modehint{font-weight:700;color:#216354}details.auth{margin-top:12px;border-top:1px solid #e4eae6;padding-top:12px}summary{cursor:pointer;font-weight:700;color:#176b58}@media(max-width:600px){.card{padding:14px}.top h1{font-size:1.35rem}}
 </style>
 </head>
-<body><header class="top"><h1>☀️ بوابة إدارة مجمع النور</h1><p>إدارة الألواح والبطاريات والعاكسات والأسعار — تعديل منشور لجميع الزبائن</p></header>
+<body><header class="top"><h1>☀️ بوابة إدارة مجمع النور</h1><p>إدارة الألواح والبطاريات والعاكسات والأسعار</p><a href="./index.html">← العودة إلى الموقع</a></header>
 <main>
-<section id="loginArea" class="card"><h2>🔒 دخول المدير</h2><p class="muted">البوابة تعتمد حساب GitHub المالك للمشروع. تحتاج رمز وصول GitHub (Fine-grained token) محدود لمستودع <b>sudnshh/Alnoor-</b> بصلاحية <b>Contents: Read and write</b>. الرمز لا يُخزّن في الموقع ولا بالجهاز، ويُحذف عند إغلاق الصفحة.</p><label class="field">رمز الدخول الخاص بحسابك<input id="token" type="password" spellcheck="false" autocomplete="off" placeholder="github_pat_..."></label><div class="actions"><button class="btn" id="connect">دخول وتحميل الأسعار</button><a class="btn alt" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens/new">إنشاء رمز وصول من GitHub</a></div><div class="notice">تنبيه: لا تضع كلمة سر حسابك ولا ترسل رمز GitHub لأي شخص. يجب منح الرمز صلاحية هذا المستودع فقط. لن يعمل مجرد رقم سري ثابت مثل ٨ لحماية موقع GitHub Pages.</div></section>
-<section id="appArea" class="hidden"><div class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0">إدارة المنتجات والأسعار</h2><button id="logout" class="btn alt">تسجيل خروج</button></div><p class="muted" id="summary">جاري التحميل…</p><div class="tabs" id="tabs"></div><div id="catalog"></div><div class="actions"><button class="btn" id="save">💾 حفظ الأسعار ونشرها</button><button class="btn alt" id="refresh">تحديث من GitHub</button><button class="btn alt" id="toggleAdvanced">تعديل الكود يدويًا</button></div><div id="status" class="status hidden" role="status"></div></div><section class="card hidden" id="advanced"><h2>محرّر data.js المتقدم</h2><p class="muted">إذا لم تظهر فئات المنتجات في الأعلى، يمكنك تعديل نص <code>data.js</code> هنا. انتبه لأسماء المتغيرات والفواصل والأقواس.</p><textarea id="rawCode" spellcheck="false"></textarea><div class="notice">إذا أجريت تعديلاً يدويًا، استخدم زر «حفظ الكود اليدوي» بدلاً من حفظ الأسعار، حتى لا تُفقد تعديلاتك.</div><button class="btn" id="saveRaw">حفظ الكود اليدوي ونشره</button></section></section>
-<footer class="muted">هذا الملف واجهة إدارة، وليس خادماً خاصاً. تقوم GitHub API بحفظ التغييرات في ملف data.js ثم ينشر GitHub Pages الموقع تلقائياً. قد تحتاج عدة دقائق حتى تظهر التعديلات.</footer>
+<section id="loginArea" class="card">
+<h2>أهلاً بيك 👋</h2>
+<p class="muted">تگدر تعدّل أسعار المنتجات بسهولة. اختار الطريقة المناسبة:</p>
+<div class="stepguide"><b>الطريقة الأسهل — بدون رمز</b><br>عدّل الأسعار ثم نزّل ملف <code>data.js</code> وارفعه إلى GitHub حتى تظهر التغييرات للزبائن.<div class="actions"><button class="btn" id="offline">فتح لوحة تعديل الأسعار</button></div></div>
+<details class="auth"><summary>النشر المباشر من اللوحة (يتطلب رمز GitHub)</summary>
+<p class="muted">حتى تُنشر التغييرات مباشرة لجميع الزبائن، تحتاج رمز وصول <b>Fine-grained personal access token</b> من حساب <b>sudnshh</b>، مخصص لمستودع <b>Alnoor-</b> بصلاحية <b>Contents: Read and write</b>.</p>
+<label class="field">رمز GitHub<input id="token" type="password" spellcheck="false" autocomplete="off" placeholder="github_pat_..."></label>
+<div class="actions"><button class="btn" id="connect">دخول للنشر المباشر</button><a class="btn alt" target="_blank" rel="noopener noreferrer" href="https://github.com/settings/personal-access-tokens/new">إنشاء الرمز من GitHub</a></div>
+<div class="notice">لا تشارك الرمز مع أي أحد ولا تضعه داخل ملفات الموقع. الرمز يُستخدم أثناء هذه الجلسة فقط ولا يُحفَظ في الجهاز.</div>
+</details></section>
+<section id="appArea" class="hidden"><div class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0">إدارة المنتجات والأسعار</h2><button id="logout" class="btn alt">تسجيل خروج</button></div><p class="modehint" id="modeHint"></p><p class="muted" id="summary">جاري التحميل…</p>
+<h2>أسعار الخدمة والإعدادات العامة</h2><div id="settings" class="settingsgrid"></div>
+<h2 style="margin-top:22px">المنتجات</h2><div class="tabs" id="tabs"></div><div id="catalog"></div><div class="actions"><button class="btn" id="save">💾 حفظ التعديلات</button><button class="btn alt" id="refresh">تحديث من GitHub</button><button class="btn alt" id="toggleAdvanced">تعديل الكود يدويًا</button></div><div id="status" class="status hidden" role="status"></div><div id="uploadHelp" class="stepguide hidden">نزّل الملف الجديد، بعدها افتح <a href="https://github.com/sudnshh/Alnoor-/upload/main" target="_blank" rel="noopener noreferrer">صفحة رفع ملفات GitHub</a>، وارفع ملف <b>data.js</b> الجديد مكان القديم واضغط <b>Commit changes</b>. بعد اكتمال النشر حدّث موقعك.</div></div><section class="card hidden" id="advanced"><h2>محرّر data.js المتقدم</h2><p class="muted">إذا لم تظهر فئات المنتجات في الأعلى، يمكنك تعديل نص <code>data.js</code> هنا. انتبه لأسماء المتغيرات والفواصل والأقواس.</p><textarea id="rawCode" spellcheck="false"></textarea><div class="notice">إذا أجريت تعديلاً يدويًا، استخدم زر «حفظ الكود اليدوي» بدلاً من حفظ الأسعار، حتى لا تُفقد تعديلاتك.</div><button class="btn" id="saveRaw">حفظ الكود اليدوي ونشره</button></section></section>
+<footer class="muted">بدون رمز GitHub، التنزيل وحده لا ينشر الأسعار للزبائن؛ يجب رفع ملف data.js الجديد إلى المشروع. النشر المباشر يحتاج رمز GitHub خاص بالمالك.</footer>
 </main>
 <script>
 'use strict';
 const repo='sudnshh/Alnoor-', branch='main', filename='data.js';
-let accessToken='',sha='',original='',groups=[],selected=0,dirty=false,username='';
+let accessToken='',sha='',original='',groups=[],defaults=null,defaultsRange=null,selected=0,dirty=false,username='',mode='offline';
 const $=s=>document.getElementById(s);
 function status(message,error=false){let el=$('status');el.className='status'+(error?' err':'');el.textContent=message}
 function authError(e){return /401|403/.test(e.message)?'الرمز غير صحيح أو صلاحياته لا تسمح بالتعديل. '+e.message:e.message}
@@ -30,19 +41,91 @@ if(t.t==='['){let arr=[],p=pos+1;while(tokens[p]&&tokens[p].t!==']'){if(tokens[p
 if(t.t==='{'){let ob={},p=pos+1;while(tokens[p]&&tokens[p].t!=='}'){if(tokens[p].t===','){p++;continue}let k=tokens[p];if(!['string','id','number'].includes(k.t)||tokens[p+1]?.t!==':')throw Error('unsupported object property');let q=parseValue(tokens,p+2);ob[String(k.v)]=q.value;p=q.next;if(tokens[p]?.t===',')p++;else if(tokens[p]?.t!=='}')throw Error('object separator')}if(!tokens[p])throw Error('unclosed object');return{value:ob,next:p+1}}throw Error('unsupported token')}
 function findGroups(source){let tokens=lex(source),result=[];for(let p=0;p<tokens.length;p++){if(tokens[p].t!=='[')continue;try{let q=parseValue(tokens,p);if(!Array.isArray(q.value)||!q.value.some(v=>v&&typeof v==='object'&&!Array.isArray(v)))continue;if(!q.value.every(v=>v&&typeof v==='object'&&!Array.isArray(v)))continue;let prev=tokens[p-1],prev2=tokens[p-2],name=(prev?.t===':'||prev?.t==='=')?String(prev2?.v||''):'مجموعة '+(result.length+1);if(!name||name==='[')name='مجموعة '+(result.length+1);result.push({name,start:tokens[p].start,end:tokens[q.next-1].end,items:q.value});p=q.next-1}catch(e){}}
 return result}
+function findDefaults(source){
+ const tokens=lex(source);
+ for(let p=0;p<tokens.length-2;p++){
+   if(tokens[p].v!=='defaults'||tokens[p+1].t!==':'||tokens[p+2].t!=='{')continue;
+   try{const q=parseValue(tokens,p+2);
+      if(q.value&&typeof q.value==='object'&&!Array.isArray(q.value))
+        return {start:tokens[p+2].start,end:tokens[q.next-1].end,items:q.value};
+   }catch(e){}
+ }
+ return null;
+}
+function renderDefaults(){
+ const area=$('settings');clear(area);
+ if(!defaults){area.textContent='لم أجد الإعدادات العامة في ملف البيانات.';return}
+ const fields={usdRate:'سعر صرف 100 دولار (د.ع)',laborPrice:'أجور التركيب (د.ع)',structurePricePerPanel:'كلفة الهيكل لكل لوح (د.ع)',protectionPrice:'أجور الحماية (د.ع)',connectionPriceUnder30:'أجور الربط حتى 30 لوح (د.ع)',connectionPriceOver30:'أجور الربط فوق 30 لوح (د.ع)'};
+ for(const [key,value] of Object.entries(defaults)){
+   let label=elem('label',fields[key]||human(key),'field');
+   let input=document.createElement('input');input.type='number';input.min='0';input.step='1';input.value=value;
+   input.oninput=()=>{defaults[key]=input.value===''?0:Number(input.value);dirty=true};
+   label.append(input);area.append(label);
+ }
+}
+function displayMode(){
+ const direct=mode==='direct';
+ $('modeHint').textContent=direct?'🔐 وضع النشر المباشر — التغييرات تُرسل إلى GitHub بعد الحفظ':'📥 وضع التعديل السهل — عند الحفظ يُنزَّل ملف data.js ويجب رفعه إلى GitHub';
+ $('save').textContent=direct?'💾 حفظ ونشر الأسعار':'💾 تنزيل ملف الأسعار المعدّل';
+ $('saveRaw').textContent=direct?'حفظ الكود اليدوي ونشره':'تنزيل الكود اليدوي';
+ $('uploadHelp').classList.add('hidden');
+}
+function loadFromSource(src){
+ original=src;groups=findGroups(src);defaultsRange=findDefaults(src);
+ defaults=defaultsRange?defaultsRange.items:null;
+ selected=0;dirty=false;$('rawCode').value=src;
+ render();renderDefaults();displayMode();
+}
+async function loadPublic(){
+ const res=await fetch('./data.js?updated='+Date.now(),{cache:'no-store'});
+ if(!res.ok)throw Error('تعذّر قراءة ملف الأسعار: '+res.status);
+ sha='';loadFromSource(await res.text());
+}
+function downloadSource(src){
+ const file=new Blob([src],{type:'text/javascript;charset=utf-8'});
+ const url=URL.createObjectURL(file);const link=document.createElement('a');
+ link.href=url;link.download='data.js';document.body.append(link);link.click();link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+function validateProducts(){
+ for(const group of groups){
+   const ids=new Set();
+   if(!group.items.length)throw Error('قائمة '+group.name+' فارغة. أضف منتجاً واحداً على الأقل.');
+   for(const item of group.items){
+     if(typeof item.id!=='string'||!item.id.trim()||typeof item.name!=='string'||!item.name.trim())throw Error('يجب كتابة معرّف واسم لكل منتج في '+group.name);
+     if(ids.has(item.id))throw Error('معرّف مكرر في '+group.name+': '+item.id);
+     ids.add(item.id);
+     if(!Number.isFinite(item.priceIQD)||item.priceIQD<0)throw Error('سعر غير صحيح للمنتج '+item.name);
+   }
+ }
+ for(const [key,value] of Object.entries(defaults||{}))if(typeof value!=='number'||!Number.isFinite(value)||value<0)throw Error('الرقم غير صحيح في الإعداد '+key);
+}
 function human(s){const names={name:'الاسم',brand:'الماركة',model:'الموديل',type:'النوع',price:'السعر',unitPrice:'سعر القطعة',priceIQD:'السعر بالدينار',pricePerWatt:'سعر الواط',watt:'الواط',watts:'الواط',power:'القدرة',capacity:'السعة',amp:'الأمبير',ah:'أمبير/ساعة',voltage:'الفولت',kw:'كيلوواط',kwh:'كيلوواط ساعة',id:'المعرّف',label:'الوصف',description:'التفاصيل'};return names[s]||s}
 function groupLabel(s){if(/panel|solar|لوح|الواح|ألواح/i.test(s))return '☀️ الألواح — '+s;if(/batter|بطاري/i.test(s))return '🔋 البطاريات — '+s;if(/invert|عاكس/i.test(s))return '⚡ العاكسات — '+s;return '📦 '+s}
 function clear(el){while(el.firstChild)el.removeChild(el.firstChild)}
 function elem(tag,text,cls){let el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el}
 function render(){clear($('tabs'));clear($('catalog'));$('summary').textContent=groups.length?'تم التعرف على '+groups.length+' قوائم منتجات في data.js. عدّل الأسعار ثم احفظ.':'ما تم العثور على قوائم منتجات بصيغة ثابتة يمكن تحريرها تلقائيًا. افتح «تعديل الكود يدويًا».';if(!groups.length)return;groups.forEach((g,i)=>{let b=elem('button',groupLabel(g.name),'tab'+(i===selected?' active':''));b.onclick=()=>{selected=i;render()};$('tabs').append(b)});let group=groups[selected],container=$('catalog');let title=elem('h2',groupLabel(group.name)+' ('+group.items.length+')');container.append(title);group.items.forEach((item,i)=>{let box=elem('div',undefined,'product'),header=elem('div',undefined,'productheader');header.append(elem('strong',(item.name||item.brand||item.model||item.type||'المنتج')+' — '+(i+1)));let remove=elem('button','حذف المنتج','btn danger');remove.onclick=()=>{if(!confirm('هل تريد حذف هذا المنتج؟'))return;group.items.splice(i,1);dirty=true;render()};header.append(remove);box.append(header);let fields=elem('div',undefined,'fields');for(const [key,value] of Object.entries(item)){let label=elem('label',human(key),'field'),input;if(typeof value==='boolean'){input=document.createElement('select');[['true','نعم'],['false','لا']].forEach(([v,l])=>{let o=elem('option',l);o.value=v;input.append(o)});input.value=String(value);input.onchange=()=>{item[key]=input.value==='true';dirty=true}}else if(value&&typeof value==='object'){input=document.createElement('textarea');input.value=JSON.stringify(value,null,2);input.onchange=()=>{try{item[key]=JSON.parse(input.value);input.style.borderColor='';dirty=true}catch(e){input.style.borderColor='red';status('خطأ في تنسيق JSON للحقل '+key,true)}}}else{input=document.createElement('input');input.type=typeof value==='number'?'number':'text';if(input.type==='number')input.step='any';input.value=value??'';input.oninput=()=>{item[key]=input.type==='number'?(input.value===''?0:Number(input.value)):input.value;dirty=true}}label.append(input);fields.append(label)}box.append(fields);container.append(box)});let add=elem('button','+ إضافة نوع جديد','btn alt');add.onclick=()=>{if(!group.items.length){status('ماكو نموذج للمنتج الجديد. استعمل المحرر اليدوي.',true);return}let model=group.items[group.items.length-1],newItem={};for(const [key,value] of Object.entries(model))newItem[key]=typeof value==='number'?0:typeof value==='boolean'?false:Array.isArray(value)?[]:value&&typeof value==='object'?{}:'';group.items.push(newItem);dirty=true;render()};container.append(add)}
-async function load(){let data=await api('/repos/'+repo+'/contents/'+filename+'?ref='+branch);if(data.type!=='file')throw Error('data.js ليس ملفًا');sha=data.sha;original=decode64(data.content);groups=findGroups(original);selected=0;dirty=false;$('rawCode').value=original;render()}
-function updateSource(){let src=original;let sections=[...groups].sort((a,b)=>b.start-a.start);for(const g of sections)src=src.slice(0,g.start)+JSON.stringify(g.items,null,2)+src.slice(g.end);return src}
-async function saveSource(src){if(!src.trim())throw Error('الملف فارغ. لن يتم الحفظ');const r=await api('/repos/'+repo+'/contents/'+filename,{method:'PUT',body:JSON.stringify({message:'Update solar catalog prices via admin panel',content:encode64(src),sha,branch})});sha=r.content.sha;original=src;groups=findGroups(src);selected=0;dirty=false;$('rawCode').value=src;render();status('✅ انحفظت التعديلات في GitHub بنجاح! انتظر اكتمال نشر GitHub Pages ثم حدّث موقع الزبائن.')}
-$('connect').onclick=async()=>{let b=$('connect');accessToken=$('token').value.trim();if(!accessToken){alert('أدخل رمز GitHub الخاص');return}b.disabled=true;b.textContent='جاري التحقق…';try{let user=await api('/user');if(user.login!=='sudnshh')throw Error('الحساب المتصل ليس مالك الموقع sudnshh');username=user.login;await load();$('token').value='';$('loginArea').classList.add('hidden');$('appArea').classList.remove('hidden')}catch(e){alert('تعذّر الدخول: '+authError(e));accessToken=''}finally{b.disabled=false;b.textContent='دخول وتحميل الأسعار'}};
+async function load(){let data=await api('/repos/'+repo+'/contents/'+filename+'?ref='+branch);if(data.type!=='file')throw Error('data.js ليس ملفًا');sha=data.sha;loadFromSource(decode64(data.content))}
+function updateSource(){validateProducts();let src=original;let sections=[...groups];if(defaultsRange)sections.push({start:defaultsRange.start,end:defaultsRange.end,items:defaults});sections.sort((a,b)=>b.start-a.start);for(const g of sections)src=src.slice(0,g.start)+JSON.stringify(g.items,null,2)+src.slice(g.end);return src}
+async function saveSource(src){
+ if(!src.trim())throw Error('الملف فارغ. لن يتم الحفظ');
+ if(!findGroups(src).length||!findDefaults(src))throw Error('ملف البيانات لا يحتوي قوائم منتجات وإعدادات صحيحة');
+ if(mode==='direct'){
+   const r=await api('/repos/'+repo+'/contents/'+filename,{method:'PUT',body:JSON.stringify({message:'Update solar catalog prices via admin panel',content:encode64(src),sha,branch})});
+   sha=r.content.sha;loadFromSource(src);
+   status('✅ انحفظت التعديلات في GitHub بنجاح. بعد اكتمال نشر GitHub Pages، حدّث صفحة موقعك.');
+ }else{
+   downloadSource(src);loadFromSource(src);
+   status('✅ تم تنزيل ملف data.js المعدّل على جهازك. مهم: لازم ترفعه على GitHub حتى تتغير الأسعار عند الزبائن.');
+   $('uploadHelp').classList.remove('hidden');
+ }
+}
+$('offline').onclick=async()=>{const b=$('offline');b.disabled=true;b.textContent='جاري فتح اللوحة…';mode='offline';try{await loadPublic();$('loginArea').classList.add('hidden');$('appArea').classList.remove('hidden')}catch(e){alert('تعذّر فتح لوحة الأسعار: '+e.message+' — تأكد أنك تفتح الصفحة عبر رابط موقعك، وليس ملفاً محلياً.')}finally{b.disabled=false;b.textContent='فتح لوحة تعديل الأسعار'}};
+$('connect').onclick=async()=>{let b=$('connect');accessToken=$('token').value.trim();if(!accessToken){alert('أدخل رمز GitHub الخاص');return}b.disabled=true;b.textContent='جاري التحقق…';try{let user=await api('/user');if(user.login!=='sudnshh')throw Error('الحساب المتصل ليس مالك الموقع sudnshh');username=user.login;mode='direct';await load();$('token').value='';$('loginArea').classList.add('hidden');$('appArea').classList.remove('hidden')}catch(e){alert('تعذّر الدخول: '+authError(e));accessToken='';mode='offline'}finally{b.disabled=false;b.textContent='دخول وتحميل الأسعار'}};
 $('save').onclick=async()=>{let b=$('save');if(!groups.length){status('ماكو قوائم قابلة للتحرير تلقائيًا. افتح محرر الكود.',true);return}if(!dirty){status('ماكو تغييرات للحفظ.');return}b.disabled=true;status('جاري حفظ الأسعار…');try{await saveSource(updateSource())}catch(e){status('تعذّر الحفظ: '+authError(e),true)}finally{b.disabled=false}};
 $('saveRaw').onclick=async()=>{if(!confirm('تأكيد حفظ نص data.js اليدوي؟'))return;let b=$('saveRaw');b.disabled=true;status('جاري الحفظ…');try{await saveSource($('rawCode').value)}catch(e){status('تعذّر الحفظ: '+authError(e),true)}finally{b.disabled=false}};
-$('refresh').onclick=async()=>{if(dirty&&!confirm('التغييرات غير المحفوظة راح تضيع. متابعة؟'))return;try{await load();status('تم تحميل آخر نسخة من GitHub')}catch(e){status(authError(e),true)}};
-$('logout').onclick=()=>{accessToken='';sha='';original='';groups=[];dirty=false;username='';$('appArea').classList.add('hidden');$('loginArea').classList.remove('hidden');$('token').value='';$('status').className='status hidden'};
+$('refresh').onclick=async()=>{if(dirty&&!confirm('التغييرات غير المحفوظة راح تضيع. متابعة؟'))return;try{if(mode==='direct')await load();else await loadPublic();status('تم تحميل أحدث ملف للأسعار')}catch(e){status(authError(e),true)}};
+$('logout').onclick=()=>{accessToken='';sha='';original='';groups=[];defaults=null;defaultsRange=null;dirty=false;username='';mode='offline';$('appArea').classList.add('hidden');$('loginArea').classList.remove('hidden');$('token').value='';$('status').className='status hidden';$('uploadHelp').classList.add('hidden')};
 $('toggleAdvanced').onclick=()=>{let adv=$('advanced');adv.classList.toggle('hidden');if(!adv.classList.contains('hidden'))adv.scrollIntoView({behavior:'smooth',block:'start'})};
 window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue=''}});
 </script></body></html>

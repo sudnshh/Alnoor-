@@ -1,6 +1,8 @@
 // DOM Binding & Controller
 document.addEventListener("DOMContentLoaded", () => {
     const calcEngine = new SolarCalculator(solarData);
+    // Prices published to data.js take priority over older per-device settings.
+    calcEngine.settings = { ...solarData.defaults };
 
     // Elements
     const inverterSelect = document.getElementById("inverterSelect");
@@ -145,33 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCalculations();
     });
 
-    // Admin Modal interactions
+    // The public button opens the dedicated admin page. It does not edit prices locally.
     openAdminBtn.addEventListener("click", () => {
-        usdRate.value = calcEngine.settings.usdRate;
-        laborPriceConfig.value = calcEngine.settings.laborPrice;
-        structurePricePerPanel.value = calcEngine.settings.structurePricePerPanel;
-        protectionPriceConfig.value = calcEngine.settings.protectionPrice;
-        connectionPriceUnder30.value = calcEngine.settings.connectionPriceUnder30 || 500000;
-        connectionPriceOver30.value = calcEngine.settings.connectionPriceOver30 || 750000;
-        adminModal.classList.add("active");
-    });
-
-    closeAdminBtn.addEventListener("click", () => {
-        adminModal.classList.remove("active");
-    });
-
-    saveAdminSettings.addEventListener("click", () => {
-        calcEngine.saveSettings({
-            usdRate: Number(usdRate.value) || 150000,
-            laborPrice: Number(laborPriceConfig.value) || 250000,
-            structurePricePerPanel: Number(structurePricePerPanel.value) || 25000,
-            protectionPrice: Number(protectionPriceConfig.value) || 180000,
-            connectionPriceUnder30: Number(connectionPriceUnder30.value) || 500000,
-            connectionPriceOver30: Number(connectionPriceOver30.value) || 750000
-        });
-        adminModal.classList.remove("active");
-        updateCalculations();
-        alert("تم حفظ وتحديث إعدادات الأسعار بنجاح في مجمع النور التجاري!");
+        window.location.href = "./admin.html";
     });
 
     function validateInstallmentInput(res) {
