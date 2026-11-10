@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجمع النور التجاري | حاسبة منظومات الطاقة الشمسية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top App Bar / Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="brand-badge">
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+                    <div class="brand-text">
+                        <h1>مجمع النور التجاري</h1>
+                        <span class="sub-badge">صمم منظومتك الشمسية | عرض أسعار فوري ومعتمد</span>
+                    </div>
+                </div>
+                <button class="btn-admin" id="openAdminBtn">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>بوابة الإدارة</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Banner -->
+        <section class="hero-card">
+            <div class="hero-overlay"></div>
+            <div class="hero-body">
+                <h2>اختر مكونات منظومة الطاقة الشمسية لمنزلك أو عملك</h2>
+                <p>حدد نوع العاكس، عدد الألواح والبطاريات المناسبة، وسيقوم النظام باحتساب التكلفة الإجمالية والتقسيط تلقائياً بالدينار العراقي.</p>
+                <div class="hero-actions">
+                    <button class="btn-reset" id="resetBtn">
+                        <i class="fa-solid fa-rotate"></i> بدء حساب جديد
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculation Grid Form -->
+        <main class="calculator-grid">
+            <!-- Step 1: Inverter -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>اختيار العاكس الذكي (Inverter)</h3>
+                        <p class="step-desc">اختر الماركة، القدرة بالكيلوواط، والكمية المطلوبة</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-bolt"></i> نوع وقدرة العاكس:</label>
+                    <select id="inverterSelect" class="form-control">
+                        <!-- Loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group row-inline">
+                    <div class="col">
+                        <label>الكمية:</label>
+                        <input type="number" id="inverterQty" class="form-control" value="1" min="1" max="10">
+                    </div>
+                    <div class="col price-display">
+                        <label>سعر المفرد:</label>
+                        <span id="inverterUnitPrice" class="price-val">0 د.ع</span>
+                    </div>
+                </div>
+                <div class="selected-pill" id="inverterPill">
+                    <i class="fa-solid fa-bolt-lightning"></i> <span id="inverterPillText">القدرة المختارة: داي 6.0 kW</span>
+                </div>
+            </div>
+
+            <!-- Step 2: Solar Panels -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>ألواح الطاقة الشمسية (Solar Panels)</h3>
+                        <p class="step-desc">لوحات ذات كفاءة تصنيف Tier-1 عالية التحمل</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-table-cells"></i> نوع اللوح الشمسي:</label>
+                    <select id="panelSelect" class="form-control">
+                        <!-- Loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group row-inline">
+                    <div class="col">
+                        <label>عدد الألواح:</label>
+                        <input type="number" id="panelQty" class="form-control" value="8" min="0" max="60" step="2">
+                    </div>
+                    <div class="col price-display">
+                        <label>سعر اللوح:</label>
+                        <span id="panelUnitPrice" class="price-val">0 د.ع</span>
+                    </div>
+                </div>
+                <div class="meta-info">
+                    <small><i class="fa-solid fa-circle-info"></i> إجمالي قدرة الألواح: <b id="totalPanelWatt">0</b> واط</small>
+                </div>
+            </div>
+
+            <!-- Step 3: Batteries -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>بنك البطاريات والتخزين (Energy Storage)</h3>
+                        <p class="step-desc">بطاريات الليثيوم (LifePO4) أو الجل عالية الأداء</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-car-battery"></i> نوع وموديل البطارية:</label>
+                    <select id="batterySelect" class="form-control">
+                        <!-- Loaded dynamically -->
+                    </select>
+                </div>
+                <div class="form-group row-inline">
+                    <div class="col">
+                        <label>عدد البطاريات:</label>
+                        <input type="number" id="batteryQty" class="form-control" value="1" min="0" max="20">
+                    </div>
+                    <div class="col price-display">
+                        <label>سعر البطارية:</label>
+                        <span id="batteryUnitPrice" class="price-val">0 د.ع</span>
+                    </div>
+                </div>
+                <div class="meta-info">
+                    <small><i class="fa-solid fa-circle-check"></i> إجمالي سعة التخزين: <b id="totalBatteryCap">0</b> kWh</small>
+                </div>
+            </div>
+
+            <!-- Step 4: Accessories & Installation -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>الهياكل، الأسلاك وأجور التنصيب</h3>
+                        <p class="step-desc">قواعد تثبيت مجلفنة، قواطع حماية DC/AC، وكوابل إيطالية</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-plug"></i> خدمة الربط:</label>
+                    <div class="payment-choice">
+                        <label class="custom-checkbox"><input type="radio" name="connectionOption" id="connectionYes" value="yes" checked><span class="checkmark"></span><span class="label-text">مع ربط</span></label>
+                        <label class="custom-checkbox"><input type="radio" name="connectionOption" id="connectionNo" value="no"><span class="checkmark"></span><span class="label-text">بدون ربط</span></label>
+                    </div>
+                    <small class="step-desc">تُضاف أجور الربط إلى السعر عند اختيار «مع ربط».</small>
+                </div>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="includeStructure" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">هياكل تثبيت ألمنيوم / حديد مجلفن مقاوم للرياح</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="includeProtection" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">لوحة حوافظ وقواطع ذكية (DC Breaker, SPD, ATS)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="includeLabor" checked>
+                        <span class="checkmark"></span>
+                        <span class="label-text">أجور النقل والتنصيب الهندسي الفاحص (ضمان عام)</span>
+                    </label>
+                </div>
+            </div>
+        </main>
+
+        <!-- Summary & Financing Section -->
+        <section class="summary-section">
+            <div class="summary-card">
+                <div class="summary-header">
+                    <h2><i class="fa-solid fa-file-invoice-dollar"></i> الحسبة المالية وعرض السعر</h2>
+                    <span class="badge-live">تسعير حي ومباشر</span>
+                </div>
+
+                <div class="summary-breakdown">
+                    <div class="breakdown-row">
+                        <span>إجمالي تكلفة المكونات (كاش):</span>
+                        <span id="cashTotal" class="amount bold highlight">0 د.ع</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>تكلفة التجهيز، الأسلاك والقواطع:</span>
+                        <span id="auxCost" class="amount">0 د.ع</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>أجور الربط:</span>
+                        <span id="connectionCost" class="amount">0 د.ع</span>
+                    </div>
+                    <div class="breakdown-row">
+                        <span>أجور النقل والتركيب:</span>
+                        <span id="laborCost" class="amount">0 د.ع</span>
+                    </div>
+                    <div class="breakdown-divider"></div>
+                    <div class="breakdown-row total-row">
+                        <span>السعر الإجمالي النهائي (نقداً):</span>
+                        <span id="grandCashTotal" class="amount grand-total">0 د.ع</span>
+                    </div>
+                </div>
+
+                <div class="form-group payment-mode-group">
+                    <h3>طريقة الدفع</h3>
+                    <div class="payment-choice">
+                        <label class="custom-checkbox"><input type="radio" name="paymentMode" id="paymentCash" value="cash" checked><span class="checkmark"></span><span class="label-text">نقداً</span></label>
+                        <label class="custom-checkbox"><input type="radio" name="paymentMode" id="paymentInstallment" value="installment"><span class="checkmark"></span><span class="label-text">أقساط</span></label>
+                    </div>
+                </div>
+
+                <!-- Installment Plan: fixed 18 months, 40% on remaining balance only -->
+                <div class="installment-box" id="installmentBox">
+                    <div class="installment-header">
+                        <h3><i class="fa-solid fa-calculator"></i> خطة التقسيط الميسر</h3>
+                        <span class="installment-rule">ملاحظة: نسبة التحميل تُحسب فقط على المبلغ المتبقي بعد المقدمة</span>
+                    </div>
+                    
+                    <div class="installment-inputs">
+                        <div class="input-block">
+                            <label for="downPaymentAmount">أدخل مبلغ الدفعة المقدمة بنفسك (د.ع):</label>
+                            <input type="number" id="downPaymentAmount" class="form-control" placeholder="مثلاً: 2,000,000" min="0" step="1000" inputmode="numeric">
+                        </div>
+                        <div class="input-block">
+                            <label>مدة التقسيط المعتمدة:</label>
+                            <div class="fixed-months">18 شهراً ثابتة</div>
+                        </div>
+                    </div>
+
+                    <div class="installment-results">
+                        <div class="res-item">
+                            <span>الدفعة المقدمة (بدون تحميل):</span>
+                            <b id="displayDownPayment">0 د.ع</b>
+                        </div>
+                        <div class="res-item">
+                            <span>المبلغ المتبقي للتقسيط:</span>
+                            <b id="displayRemaining">0 د.ع</b>
+                        </div>
+                        <div class="res-item">
+                            <span>قيمة التحميل (الفائدة على المتبقي):</span>
+                            <b id="displayInterest">0 د.ع</b>
+                        </div>
+                        <div class="res-item monthly-highlight">
+                            <span>القسط الشهري التقريبي:</span>
+                            <b id="displayMonthlyInstallment">0 د.ع / شهر</b>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="actions-group">
+                    <button class="btn-primary" id="printQuoteBtn">
+                        <i class="fa-solid fa-print"></i> طباعة عرض سعر رسمي / PDF
+                    </button>
+                    <button class="btn-whatsapp" id="whatsappBtn">
+                        <i class="fa-brands fa-whatsapp"></i> إرسال التفاصيل عبر واتساب
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>مجمع النور التجاري - تجارة الأجهزة الكهربائية وأنظمة الطاقة المتجددة</p>
+            <p><small>بيجي - قرب مطعم الزيتون</small></p>
+        </footer>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="modal" id="adminModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fa-solid fa-sliders"></i> لوحة التحكم بإعدادات الأسعار</h3>
+                    <button class="btn-close" id="closeAdminBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>سعر صرف الدولار (مقابل 100$):</label>
+                        <input type="number" id="usdRate" class="form-control" value="150000">
+                    </div>
+                    <div class="form-group">
+                        <label>أجور التركيب الأساسية (د.ع):</label>
+                        <input type="number" id="laborPriceConfig" class="form-control" value="250000">
+                    </div>
+                    <div class="form-group">
+                        <label>تكلفة الهياكل والقواعد لكل لوح (د.ع):</label>
+                        <input type="number" id="structurePricePerPanel" class="form-control" value="25000">
+                    </div>
+                    <div class="form-group">
+                        <label>تكلفة حوافظ وتوصيلات الحماية (د.ع):</label>
+                        <input type="number" id="protectionPriceConfig" class="form-control" value="180000">
+                    </div>
+                    <div class="form-group">
+                        <label>أجور الربط حتى 30 لوح (د.ع):</label>
+                        <input type="number" id="connectionPriceUnder30" class="form-control" value="500000">
+                    </div>
+                    <div class="form-group">
+                        <label>أجور الربط لأكثر من 30 لوح (د.ع):</label>
+                        <input type="number" id="connectionPriceOver30" class="form-control" value="750000">
+                    </div>
+                    <p class="admin-note"><i class="fa-solid fa-circle-check"></i> تُحفظ الأسعار على هذا المتصفح فقط إلى حين ربط قاعدة بيانات سحابية.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="saveAdminSettings">حفظ التعديلات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Printable Quotation Template (Hidden by default, visible during print) -->
+    <div id="printSection" class="print-only">
+        <div class="print-header">
+            <div class="print-logo">
+                <h2>مجمع النور التجاري</h2>
+                <p>لتجارة الأجهزة الكهربائية والمنظومات الشمسية</p>
+                <small>العراق - بيجي - قرب مطعم الزيتون</small>
+            </div>
+            <div class="print-meta">
+                <h3>عرض سعر منظومة شمسية</h3>
+                <p>التاريخ: <span id="printDate"></span></p>
+                <p>رقم العرض: <span id="printQuoteNumber"></span></p>
+            </div>
+        </div>
+        <hr class="print-divider">
+        <div class="print-table-wrapper">
+            <table class="quote-table">
+                <thead>
+                    <tr>
+                        <th>ت</th>
+                        <th>المادة / الوصف</th>
+                        <th>المواصفات الفنية</th>
+                        <th>العدد</th>
+                        <th>سعر الوحدة (د.ع)</th>
+                        <th>المجموع (د.ع)</th>
+                    </tr>
+                </thead>
+                <tbody id="printTableBody">
+                    <!-- Dynamic -->
+                </tbody>
+            </table>
+        </div>
+        <div class="print-summary">
+            <div class="print-calc-box">
+                <p><strong>المجموع الكلي نقداً: </strong><span id="printTotalCash">0 د.ع</span></p>
+                <div id="printInstallmentInfo"></div>
+            </div>
+            <div class="print-terms">
+                <h4>الشروط والضمان:</h4>
+                <ul>
+                    <li>ضمان استبدال وصيانة حقيقية للعاكس والبطاريات مع الفحص الهندسي الدوري.</li>
+                    <li>كفاءة الألواح مضمونة لمدة 25 سنة بإنتاجية لا تقل عن 80%.</li>
+                    <li>العرض نافذ لمدة 5 أيام من تاريخ إصداره.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="print-signatures">
+            <div>
+                <p>توقيع مسؤول المبيعات</p>
+                <div class="sign-space"></div>
+            </div>
+            <div>
+                <p>ختم مجمع النور التجاري</p>
+                <div class="stamp-space">مجمع النور التجاري<br>معتمد</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
